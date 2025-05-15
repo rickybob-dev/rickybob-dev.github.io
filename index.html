@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Run4Ricky Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Run4Ricky Foundation – Advocating for inclusion and support for individuals with disabilities. Join our mission!">
+  <meta property="og:title" content="Run4Ricky Foundation">
+  <meta property="og:description" content="Honoring Ricky's legacy through advocacy, awareness, and community.">
+  <meta property="og:image" content="https://ichef.bbci.co.uk/ace/standard/1600/cpsprodpb/3129/live/7f9d9e90-2399-11f0-8c2e-77498b1ce297.jpg">
+
   <style>
     body {
       margin: 0;
@@ -84,12 +90,12 @@
       object-fit: cover;
     }
 
-    form input[type="email"] {
+    form input, form textarea {
       padding: 0.5rem;
-      width: 70%;
+      width: 100%;
       border-radius: 5px;
       border: 1px solid #ccc;
-      margin-right: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     form button {
@@ -99,6 +105,13 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 4px solid #3f51b5;
     }
 
     footer {
@@ -117,23 +130,13 @@
         display: block;
         margin: 0.5rem 0;
       }
-
-      form input[type="email"] {
-        width: 100%;
-        margin-bottom: 0.5rem;
-      }
-
-      form button {
-        width: 100%;
-      }
     }
   </style>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section");
-      const options = {
-        threshold: 0.1
-      };
+      const options = { threshold: 0.1 };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -144,9 +147,7 @@
         });
       }, options);
 
-      sections.forEach(section => {
-        observer.observe(section);
-      });
+      sections.forEach(section => observer.observe(section));
     });
   </script>
 </head>
@@ -164,7 +165,9 @@
     <a href="#story">Story</a>
     <a href="#gallery">Gallery</a>
     <a href="#video">Video</a>
-    <a href="#get-involved">Get Involved</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#events">Events</a>
+    <a href="#volunteer">Volunteer</a>
     <a href="#newsletter">Newsletter</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -204,6 +207,31 @@
       </div>
     </section>
 
+    <section id="testimonials">
+      <h2>What People Are Saying</h2>
+      <blockquote>"Ricky inspired me to believe in myself. The foundation continues to lift our community every day." — Jane D.</blockquote>
+      <blockquote>"Run4Ricky gave our family hope and a place to belong." — Michael B.</blockquote>
+    </section>
+
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li><strong>June 15, 2025</strong> – 5K Awareness Run at Central Park</li>
+        <li><strong>August 10, 2025</strong> – Inclusion Workshop for Families</li>
+      </ul>
+    </section>
+
+    <section id="volunteer">
+      <h2>Volunteer With Us</h2>
+      <p>Want to help? Fill out your details and we’ll get in touch.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! We’ll contact you soon.')">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message or Skills" rows="4"></textarea>
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
     <section id="get-involved">
       <h2>Get Involved</h2>
       <p>You can help by donating, volunteering, or spreading awareness.</p>
@@ -222,6 +250,14 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>Email us: <a href="mailto:rbarbieri99@gmail.com">rbarbieri99@gmail.com</a></p>
+    </section>
+
+    <section id="follow-us">
+      <h2>Follow Us</h2>
+      <p>Stay connected on social media:</p>
+      <a href="https://facebook.com/Run4Ricky" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/Run4Ricky" target="_blank">Instagram</a> |
+      <a href="https://twitter.com/Run4Ricky" target="_blank">Twitter</a>
     </section>
   </main>
 
