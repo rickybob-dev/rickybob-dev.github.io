@@ -72,6 +72,35 @@
       margin-top: 1rem;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    form input[type="email"] {
+      padding: 0.5rem;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 0.5rem;
+    }
+
+    form button {
+      padding: 0.5rem 1rem;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -87,6 +116,15 @@
       nav a {
         display: block;
         margin: 0.5rem 0;
+      }
+
+      form input[type="email"] {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      form button {
+        width: 100%;
       }
     }
   </style>
@@ -124,7 +162,10 @@
     <a href="#about">About</a>
     <a href="#mission">Mission</a>
     <a href="#story">Story</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#video">Video</a>
     <a href="#get-involved">Get Involved</a>
+    <a href="#newsletter">Newsletter</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -145,15 +186,42 @@
       <p>The Run4Ricky Foundation was created to honor his legacy and continue the mission he started—to uplift, support, and celebrate the strength in all of us. Through every step, we carry Ricky's spirit forward—fueling change and promoting inclusion, one stride at a time.</p>
     </section>
 
+    <section id="gallery">
+      <h2>Event Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400x250?text=Event+1" alt="Event 1" />
+        <img src="https://via.placeholder.com/400x250?text=Event+2" alt="Event 2" />
+        <img src="https://via.placeholder.com/400x250?text=Event+3" alt="Event 3" />
+        <img src="https://via.placeholder.com/400x250?text=Event+4" alt="Event 4" />
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Watch Past Runs</h2>
+      <p>Experience the energy and inspiration of our past Run4Ricky events.</p>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+      </div>
+    </section>
+
     <section id="get-involved">
       <h2>Get Involved</h2>
       <p>You can help by donating, volunteering, or spreading awareness.</p>
-      <a class="button" href="https://paypal.me/YOURPAYPAL" target="_blank">Donate Now</a>
+      <a class="button" href="https://paypal.me/rickybarb/10" target="_blank">Donate Now</a>
+    </section>
+
+    <section id="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter to hear about future events and updates from the foundation.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!')">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email us: <a href="mailto:run4rickyfoundation@gmail.com">run4rickyfoundation@gmail.com</a></p>
+      <p>Email us: <a href="mailto:rbarbieri99@gmail.com">rbarbieri99@gmail.com</a></p>
     </section>
   </main>
 
